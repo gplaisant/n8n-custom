@@ -1,7 +1,7 @@
-FROM n8nio/n8n:1.88.0
+FROM n8nio/n8n:latest-debian
 
 USER root
 
-RUN apk add --no-cache ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
 
 USER node
